@@ -1,1 +1,26 @@
-{"KEY123": {"plan": "lifetime", "created": "2025-07-01", "expired": "never"}}
+{
+  "KEY-24HRS-001": {
+    "plan": "1_day",
+    "created": "2025-07-04 14:00:00",
+    "expired": "2025-07-05 14:00:00",
+    "user_id": "754978535"
+  },
+  "KEY-7DAYS-001": {
+    "plan": "7_day",
+    "created": "2025-07-04 14:05:00",
+    "expired": "2025-07-11 14:05:00",
+    "user_id": "754978535"
+  },
+  "KEY-30DAYS-001": {
+    "plan": "30_day",
+    "created": "2025-07-04 14:10:00",
+    "expired": "2025-08-03 14:10:00",
+    "user_id": "754978535"
+  },
+  "KEY-LIFETIME-001": {
+    "plan": "lifetime",
+    "created": "2025-07-04 14:15:00",
+    "expired": "never",
+    "user_id": "754978535"
+  }
+}
