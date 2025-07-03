@@ -1,43 +1,31 @@
 import os
-import time
+import subprocess
 
-def intro():
-    print("YIN YANG BLACK MARKET SYSTEM - INITIALIZING..\n")
-    time.sleep(0.5)
-    print("• @ Booting core modules...")
-    time.sleep(0.5)
-    print("• Establishing encrypted connection...")
-    time.sleep(0.5)
-    print("• Injecting payload...")
-    time.sleep(0.5)
-    print("• Verifying license key...")
-    time.sleep(0.5)
-    print("• Authentication success.\n")
-    time.sleep(0.5)
+def banner():
+    print("\nYIN YANG BLACK MARKET SYSTEM - INITIALIZING..\n•")
+    print("@ Booting core modules...")
+    print("Establishing encrypted connection...")
+    print("Injecting payload...")
+    print("Verifying license key...")
+    print("Authentication success.\n")
     print("AMARAN: Sebarang akses tanpa kebenaran akan dijejak.")
     print("Setiap tindakan anda sedang dipantau.")
     print("Tiada ruang untuk kesilapan.\n")
     print("Developer: @xiixmmi")
     print("TikTok: Yin Yang\n")
-    time.sleep(1)
 
-def run_bot():
-    from yinyangbot import start_bot
-    start_bot()
+def main():
+    banner()
+    mode = os.getenv("MODE", "bot")
 
-def run_api():
-    from main import app
-    app.run(host="0.0.0.0", port=5000)
-
-if __name__ == "__main__":
-    intro()
-    mode = os.getenv("MODE", "bot").lower()
-    
     if mode == "bot":
         print("Starting Telegram Bot Mode...\n")
-        run_bot()
+        subprocess.run(["python3", "yinyangbot.py"])
     elif mode == "api":
         print("Starting Web API Mode (Flask)...\n")
-        run_api()
+        subprocess.run(["python3", "main.py"])
     else:
-        print(f"Invalid MODE '{mode}'! Use 'bot' or 'api'.")
+        print("❌ MODE tidak dikenali. Sila set 'MODE=bot' atau 'MODE=api' dalam Replit Secrets.")
+
+if __name__ == "__main__":
+    main()
