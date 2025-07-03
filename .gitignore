@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+*.env
+.env.*
+.DS_Store
+
+# VS Code & Replit
+.vscode/
+.replit
+replit.nix
+
+# JSON yang mungkin sensitif
+*.json
+
+# Ignore token rahsia (kalau ada)
+secrets.env
+
+# MacOS
+*.DS_Store
+
+# Replit run artifacts
+*.replit-run
